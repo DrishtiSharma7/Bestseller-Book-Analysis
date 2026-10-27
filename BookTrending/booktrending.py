@@ -16,7 +16,6 @@ from selenium.common.exceptions import ( NoSuchElementException, StaleElementRef
 from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 
 DRIVER_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "chromedriver-mac-arm64", "chromedriver")
-s = Service(DRIVER_PATH if os.path.exists(DRIVER_PATH) else "/Users/drishtisharma/Downloads/DSMP/Data Analysis/chromedriver-mac-arm64/chromedriver")
 os.makedirs("html_pages", exist_ok=True)
 
 chrome_options = Options()
@@ -26,7 +25,11 @@ chrome_options.add_argument("--ignore-certificate-errors")
 chrome_options.add_argument("--start-maximized")
 chrome_options.page_load_strategy = "eager"   # fast navigation without blocking on media
 
-driver = webdriver.Chrome(service=s, options=chrome_options)
+# Use local driver if present, otherwise let Selenium Manager automatically resolve it
+if os.path.exists(DRIVER_PATH):
+    driver = webdriver.Chrome(service=Service(DRIVER_PATH), options=chrome_options)
+else:
+    driver = webdriver.Chrome(options=chrome_options)
 driver.set_page_load_timeout(60)
 
 # Next button locators (semantic selectors preferred, position xpath as fallback)
