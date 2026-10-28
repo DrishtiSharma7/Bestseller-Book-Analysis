@@ -13,7 +13,7 @@ page,title,writer,format,actual_price,price_before_discount,discount_percent,sta
 1,can we be strangers again?: a national bestseller,shrijeet shandilya,paperback,195,299,35.0,,ebury press,ebury press,,romance - general
 1,the secret of secrets: (robert langdon book 6),dan brown,hardcover,975,1499,35.0,,transworld publishers ltd,transworld publishers ltd,,thrillers - espionage
 1,magic of the lost temple,sudha murty,paperback,179,275,35.0,,india puffin,india puffin,,action & adventure - general
-1,rich dad poor dad: what the rich teach their kids about money that the poor and middle class do not!,paperback,paperback,390,599,35.0,,penguin,penguin random house,general books,personal finance - general
+1,rich dad poor dad: what the rich teach their kids about money that the poor and middle class do not!,robert t. kiyosaki,paperback,390,599,35.0,,penguin,penguin random house,general books,personal finance - general
 1,world’s greatest books for personal growth & wealth (set of 4 books) : perfect motivational,"dale carnegie, napoleon hill",paperback,390,599,35.0,,fingerprint,fingerprint,general books,
 1,the housemaid: an addictive psychological thriller with mind-bending twists,freida mcfadden,paperback,358,550,35.0,,penguin select print,"penguin select publishing""multi-million copy bestselling series",,
 1,101 tales: the great panchatantra collection,wonder house books,hardcover,390,599,35.0,,wonder house books,wonder house books,,"comics & graphic novels - fairy tales, folklore, legends & mtimeless wisdom, talking animals & life lessons for young min..."
@@ -115,7 +115,7 @@ page,title,writer,format,actual_price,price_before_discount,discount_percent,sta
 2,dont leave anything for later,library mindset,paperback,195,299,35.0,,prh india local print,penguin business,,personal growth - happiness
 2,the kite runner,khaled hosseini,paperback,390,599,35.0,,bloomsbury publishing india pvt ltd,"bloomsbury publishing india pvt ltdafghanistan, 1975: twelve-year-old amir is desperate to win the local kite-fighting tournament and his loyal fri...",,
 2,start with why: 15th anniversary edition: how great leaders inspire everyone to take action,simon sinek,paperback,520,799,35.0,,penguin books ltd,penguin books ltd,,general
-2,the one thing,dk,hardcover,325,499,35.0,,hodder & stoughton general division,hodder & stoughton general division,career counselling,
+2,the one thing,"gary keller, jay papasan",hardcover,325,499,35.0,,hodder & stoughton general division,hodder & stoughton general division,career counselling,
 2,the whole-brain child,dr. tina payne bryson,paperback,325,499,35.0,,"little, brown book group","little, brown book groupin this pioneering, practical book for parents, neuroscientist daniel j. siegel and parenting expert tina payne bryson explain t...",,
 2,where's spot?,eric hill,board book,325,499,35.0,,frederick warne and company,frederick warne and company,,concepts - general
 2,karma,sadhguru,paperback,195,299,35.0,,prh india local print,"penguin anandawill smith, tony robbins, tom brady, and others praise sadhguru's book on karma for its transformative power and practical guidance. sadhguru's teachings ...",,
@@ -267,7 +267,7 @@ ratan tata was an iconic leader who shaped the indian industry. he inspired an e
 5,chanakya neeti,radhakrishnan pillai,paperback,228,350,35.0,,jaico publishing house,jaico publishing house,,general
 5,the  housemaid is watching,freida mcfadden,paperback,390,599,35.0,,sourcebooks,poisoned pen press,,mystery & detective - general
 5,the family upstairs,lisa jewell,paperback,455,699,35.0,,cornerstone,cornerstone,,
-5,tom gates #01: the brilliant world of tom gates,paperback,paperback,380,399,5.0,,mixig,mixig,general books,
+5,tom gates #01: the brilliant world of tom gates,liz pichon,paperback,380,399,5.0,,mixig,mixig,general books,
 5,the periodic table book,dk,hardcover,650,999,35.0,,dorling kindersley ltd,dorling kindersley ltd,,
 5,gopi's day out!,sudha murty,hardcover,260,399,35.0,,harpercollins publishers india,harpercollins publishers india,,
 5,better than the movies,lynn painter,paperback,325,499,35.0,,simon & schuster books for young readers,simon & schuster books for young readers,,romance - romantic comedy
@@ -597,7 +597,7 @@ in this short, sharp, witty book originally written for zomato employees, get an
 10,super gut,dr dr william davis,paperback,585,899,35.0,,hodder & stoughton,hodder & stoughton,,
 10,"see, touch, feel: a first sensory book",roger priddy,board book,1027,1274,19.0,,priddy books,priddy books,,concepts - senses & sensation
 10,unravelled book 9.5,shannon messenger,paperback,390,599,35.0,,simon & schuster ltd,simon & schuster ltd,,
-10,the three-body problem boxset,misc,unknown,1235,1899,35.0,,bloomsbury publishing plc,bloomsbury publishing plc,,
+10,the three-body problem boxset,,unknown,1235,1899,35.0,,unknown publisher,unknown publisher imprint,,
 10,made to stick,dan heath,paperback,585,899,35.0,,cornerstone,"cornerstonein the course of over ten years of study, chip and dan heath have established what it is that determines whether particular ideas or stories stick in our minds or not...",,
 10,money works: the guide to financial literacy,abhijeet kolapkar,paperback,325,499,35.0,,penguin business,penguin business,,personal finance - money management
 10,shiva purana: vol. 2,bibek debroy,paperback,520,799,35.0,,india penguin classics,india penguin classics,,"fairy tales, folk tales, legends & mythology"
@@ -635,7 +635,7 @@ in this short, sharp, witty book originally written for zomato employees, get an
 11,the first and last freedom,j krishnamurti,paperback,260,399,35.0,,ebury publishing,ebury publishing,,
 11,the gita for children (hb),"pai, roopa",hardcover,520,799,35.0,,hachette india,hachette india children's books,,
 11,conversations with god,neale donald walsch,paperback,325,499,35.0,,hodder & stoughton,"hodder & stoughtonneal donald walsch was experiencing a low period in his life when he decided to write a letter to god, venting his frustrations. what ...",,
-11,intermezzo,paperback,paperback,455,699,35.0,,faber & faber,faber & faber,,
+11,intermezzo,sally rooney,paperback,455,699,35.0,,faber & faber,faber & faber,,
 11,the psychology of selling,brain tracy,paperback,325,499,35.0,,thomas nelson publishers,thomas nelson publishers,,economics - general
 11,speaking of history,romila thapar,hardcover,455,699,35.0,,prh india,penguin allen lane,,historiography
 11,a game of thrones: the story continues,george r.r. martin,unknown,5916,7910,25.0,,harpercollins publishers,harpercollins publishers,"creative writing, fiction",
@@ -806,7 +806,7 @@ humans are stars in their own right, mizuki. every one ...",,
 14,the god of small things,arundhati roy,hardcover,520,799,35.0,,prh india local print,penguin hamish hamilton,,literary
 14,manifest for kids,roxie nafousi,hardcover,455,699,35.0,,penguin random house children's uk,penguin random house children's uk,,
 14,the second sex (vintage feminism short edition),simone de beauvoir,paperback,260,399,35.0,,vintage publishing,vintage publishing,,
-14,"many ramayanas, many lessons",paperback,paperback,390,599,35.0,,harpercollins publishers india,harpercollins publishers india,,
+14,"many ramayanas, many lessons",anand neelakantan,paperback,390,599,35.0,,harpercollins publishers india,harpercollins publishers india,,
 14,"5 lb. book of gre practice problems: 1,800+ practice problems in book and online (manhattan prep 5 lb)",manhattan prep,paperback,3157,3920,19.0,,mixpbs,mixpbs,education & psychology,gre (graduate record examination)manhattan prep's best-selling 5 lb. book of gre practice problems has been fully updated f...
 14,execution,charles burck,paperback,975,1499,35.0,,cornerstone,"cornerstonebossidy is an acclaimed ceo, with a track record for delivering results that has few peers. charan is an advisor to senior executives and boards of directors, wit...",,
 14,revolutionaries: the other story of how india won its freedom,sanjeev sanyal,hardcover,480,599,20.0,,harpercollins india,harpercollins india,,asia - general

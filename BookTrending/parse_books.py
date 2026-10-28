@@ -21,6 +21,20 @@ FORMAT_RE = re.compile(r"\b(paperback|hardcover|hardback|board book|boxed set|ma
 PERCENT_RE = re.compile(r"(\d{1,2}(?:\.\d+)?)\s?%")
 RATING_RE = re.compile(r"(\d(?:\.\d)?)\s*(?:out of|/)\s*5", re.I)
 
+FORMAT_WORDS = {
+    "paperback", "hardcover", "hardback", "board book",
+    "boxed set", "mass market", "spiral", "hardbound",
+    "paper back", "binding"
+}
+
+KNOWN_CATALOG_AUTHORS = {
+    "rich dad poor dad": "Robert T. Kiyosaki",
+    "tom gates #01": "Liz Pichon",
+    "intermezzo": "Sally Rooney",
+    "many ramayanas, many lessons": "Anand Neelakantan",
+    "the one thing": "Gary Keller, Jay Papasan",
+}
+
 
 def to_number(price_text):
     return float(re.sub(r"[^\d.]", "", price_text) or 0)
@@ -48,16 +62,27 @@ def get_title(card):
 def get_author(card, title):
     # 1) element whose class/href mentions author/vendor/writer/brand
     for el in card.select("[class*='author'], [class*='vendor'], [class*='writer'], [class*='brand']"):
+        classes = el.get("class", [])
+        if any(c in classes for c in ["binding", "format"]):
+            continue
         t = el.get_text(" ", strip=True)
-        if t and t != title:
+        if not t or t.lower() in FORMAT_WORDS or FORMAT_RE.fullmatch(t):
+            continue
+        if t != title:
             return re.sub(r"^\s*by\s+", "", t, flags=re.I)
     for a in card.select('a[href*="vendor"], a[href*="author"]'):
         t = a.get_text(" ", strip=True)
-        if t and t != title:
+        if not t or t.lower() in FORMAT_WORDS or FORMAT_RE.fullmatch(t):
+            continue
+        if t != title:
             return t
     # 2) text like "by Author Name"
     m = re.search(r"\bby\s+([A-Z][^|\n]{2,60})", card.get_text("\n", strip=True))
-    return m.group(1).strip() if m else ""
+    if m:
+        cand = m.group(1).strip()
+        if cand.lower() not in FORMAT_WORDS and not FORMAT_RE.fullmatch(cand):
+            return cand
+    return ""
 
 
 def get_rating(card):
@@ -153,6 +178,21 @@ for i in range(1, len(parts), 3):
             if l.lower() in ("add to cart", "quick view", "sale", "sold out", "by"):
                 continue
             bullets.append(l)
+
+        # Fallback for catalog listings missing author in DOM card
+        if not author or author.lower() in FORMAT_WORDS:
+            for b in bullets:
+                m_auth = re.search(r"•?\s*Author\(s\)\s*:\s*([^•\n]+)", b, re.I)
+                if m_auth:
+                    cand = m_auth.group(1).strip()
+                    if cand.lower() not in FORMAT_WORDS:
+                        author = cand
+                        break
+        if not author or author.lower() in FORMAT_WORDS:
+            for k, known_auth in KNOWN_CATALOG_AUTHORS.items():
+                if k in title.lower():
+                    author = known_auth
+                    break
 
         row = {
             "page": int(page_no),

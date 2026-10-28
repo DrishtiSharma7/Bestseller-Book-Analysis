@@ -40,6 +40,7 @@ flowchart LR
 * **Smart DOM Container Climbing (`find_card`)**: Recursively navigates upward from product links until reaching the smallest common ancestor containing exactly one product URL, preventing multi-card container bleeding.
 * **Resilient Pagination**: Dual-strategy pagination that prefers semantic and position-based Next buttons, falling back to dynamic `?page=n` query parameter manipulation.
 * **Metadata Shift Realignment**: Detected rows where review count badges (e.g., `(1)`, `(2)`) offset metadata across bullet columns, programmatically shifting them back into single attributes.
+* **Author & Binding Sanitization**: Filtered binding/format classes (e.g. `<p class="clp-product-author binding">Paperback</p>`) where Shopify templates placed format values into author slots when metadata was missing, restoring authoritative author attribution.
 * **Regex Feature Extraction**: Isolated `subject` and `bisac` classifications from composite strings using boundary pattern detection, and extracted separate `publisher` and `publisher_imprint` fields.
 * **Price Standardization**: Stripped currency glyphs (`₹`, `,`), converted legacy USD entries into INR, and cast features into standard numeric types.
 
