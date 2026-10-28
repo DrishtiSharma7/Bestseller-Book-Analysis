@@ -23,12 +23,13 @@ Unlike clean datasets downloaded from Kaggle, real-world web data is noisy, dyna
 
 ## 🛠️ Pipeline Architecture
 
+
 ```mermaid
 flowchart LR
-    A["Atlantic Books\n(Live Website)"] -->|Selenium Browser Automation| B["Raw HTML Dump\n(books_all_pages.html)"]
-    B -->|BeautifulSoup Card Parser| C["Raw Structured Dataset\n(books.csv)"]
-    C -->|Pandas & Regex Cleaning\n(booktrending_da.ipynb)| D["Cleaned Public Dataset\n(atlantic_books_public.csv)"]
-    D -.->|Next Step| E["Exploratory Data Analysis\n(EDA Visualizations)"]
+    A["Atlantic Books<br/>(Live Website)"] --> B["Raw HTML Dump<br/>(books_all_pages.html)"]
+    B --> C["Raw Structured Dataset<br/>(books.csv)"]
+    C --> D["Cleaned Public Dataset<br/>(atlantic_books_public.csv)"]
+    D -.-> E["Exploratory Data Analysis<br/>(EDA Visualizations)"]
 ```
 
 ---
